@@ -1,0 +1,399 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-color: #e7d6d6;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-image: linear-gradient(
+    to right bottom,
+    #d5fff4,
+    #a6dad3,
+    #78b5b3,
+    #499196,
+    #066f7b
+  );
+}
+
+header {
+  position: fixed;
+  height: 5rem;
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 8rem;
+  background-color: #c6cecf86;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+}
+
+ul a {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 800;
+}
+
+ul li {
+  position: relative;
+}
+
+ul li::after {
+  content: "";
+  background-color: #066f7b;
+  transition: width 500ms ease;
+  width: 0;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 10rem;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.home-info-container > p:first-of-type {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.home-info-container > p:last-of-type {
+  font-size: 5rem;
+}
+
+.profile-container {
+  padding-right: 10rem;
+}
+.profile-container > img {
+  width: 500px;
+  border-radius: 50%;
+}
+
+.home-info-container {
+  padding-left: 8rem;
+}
+
+.social-media {
+  display: flex;
+  padding: 2rem 0rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+svg {
+  transition: all 500ms ease;
+  width: 40px;
+}
+
+svg:hover {
+  transform: scale(1.2);
+  fill: #066f7b;
+}
+
+ul a:hover {
+  color: #066f7b;
+}
+
+li:hover::after {
+  width: 100%;
+}
+
+li.active::after {
+  width: 100%;
+}
+
+.projects-main {
+  display: flex;
+  justify-content: center;
+  padding: 15rem 0rem 10rem 0rem;
+  gap: 10rem;
+}
+
+.projects-info-container {
+  width: 500px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.btn-container > button {
+  border: 2px solid #066f7b;
+  padding: 0.5rem 3rem;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: all 500ms ease;
+  color: #066f7b;
+}
+
+.btn-container > button:hover {
+  cursor: pointer;
+  color: white;
+  transform: scale(1.1);
+  background-color: #066f7b;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+.project-banner-container > img {
+  margin-bottom: 1rem;
+  box-shadow: 0 0 1rem black;
+  border-radius: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+.project-banner-container {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+li.show a {
+  color: #066f7b;
+}
+
+li.show::after {
+  width: 100%;
+}
+
+#fav-artist-tab {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  display: none;
+  pointer-events: none;
+}
+
+#address-tab {
+  display: none;
+  pointer-events: none;
+}
+
+#fav-artist-tab > div > a > img {
+  width: 200px;
+  border-radius: 8px;
+  transition: all 500ms ease;
+  margin-bottom: 0.5rem;
+}
+
+#fav-artist-tab > div > a > img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1rem black;
+}
+.fav-music > div > p {
+  text-align: center;
+}
+
+#about-me {
+  padding-block: 5rem;
+}
+
+.about-main {
+  display: flex;
+  padding: 5rem;
+  justify-content: space-between;  
+}
+
+iframe {
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem black;
+}
+
+.about-info {
+  width: 680px;
+  padding: 0rem 2rem;
+  text-align: center;  
+}
+
+.about-info > img {
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem black;
+}
+
+#about-me h2 {
+  font-size: 60px;
+}
+
+#address-tab.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+#fav-artist-tab.active {
+  display: flex;
+  pointer-events: auto;
+}
+
+#fav-song-tab,
+#fav-game-tab {
+  display: none;
+  pointer-events: none;
+}
+
+#fav-game-tab > video {
+  border-radius: 0.5rem;
+}
+
+#fav-song-tab.active,
+#fav-game-tab.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  pointer-events: auto;
+}
+
+#fav-song-tab > img {
+  width: 380px;
+  box-shadow: -1rem -1rem 1rem rgba(0, 0, 0, 0.475);
+  border-radius: 8px;
+}
+
+#fav-song-tab > p {
+  padding-block: 1rem;
+}
+
+.tabs-btn {
+  border: 2px solid white;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border-radius: 2px;
+  font-weight: 700;
+  transition: all 500ms ease;
+}
+
+.tabs-btn:hover {
+  cursor: pointer;
+  background-color: #066f7b;
+  color: white;
+}
+
+.tabs-btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-info-container {
+  width: 800px;
+}
+
+.tabs-btn.active {
+  background-color: #066f7b;
+  color: white;
+}
+
+.education{
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;        
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+    padding: 200px;              
+}
+.education > img{
+    border-radius: 10px ;
+    max-width: 320px;
+    float: left;    
+    margin-right: 20px;
+    box-shadow: 0 0 1rem black;
+}
+.education-content h2{
+    padding-top: 100px;
+    display: flex;
+    justify-content: flex-start;          
+}
+.education-content p{
+    display: flex;
+    justify-content: flex-start;         
+}
+#contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contacts .social-media {
+  gap: 5rem;
+}
+
+#contacts svg:hover {
+  fill: white;
+}
+
+#contacts h2 {
+  font-size: 5rem;
+}
+
+#contacts svg {
+  width: 80px;
+}
+
+.email-container,
+.phone-cotainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 1rem black;
+  border-radius: 8px;
+  padding: 2rem 3rem;
+  color: white;
+}
+
+footer {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0px 0rem 5rem black;
+  padding: 2rem;
+  text-align: center;
+}
